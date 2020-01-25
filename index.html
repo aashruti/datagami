@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Registration Form</title>
+</head>
+
+<body>
+  <form action="" method="POST" id="registrationform">
+    <h1>Register</h1>
+    <div class="alert">Message Sent</div>
+    <fieldset>
+      <!-- Section 1 -->
+      <legend><span class="section">1</span>Personal information</legend>
+      <!--First name-->
+      <label class="" for="fname">First Name:</label>
+      <input type="text" name="fname" value="" id="fname" required />
+      <!--Last name-->
+      <label class="" for="lname">Last Name:</label>
+      <input type="text" name="lname" value="" id="lname" required />
+      <!--Email-->
+      <label class="" for="email">Email:</label>
+      <input type="email" name="email" value="" id="email" required />
+
+      <label class="" for="phone">Phone Number:</label>
+      <input type="tel" name="phone" value="" id="phone" pattern="[7-9]{1}[0-9]{9}"  required />
+      <p>eg: 9819666056</p>
+
+      
+    </fieldset>
+
+    <fieldset>
+      <!-- section 2 -->
+      <legend><span class="section">2</span>Applicant Profile</legend>
+
+      <!--DOB-->
+      <label class="" for="dob">Date of Birth:</label>
+       <input type="date" name="dob" value="" id="dob" required />
+       <!--Gender-->
+      <label for="gender">Gender</label>
+      	<select id="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <br /><br />
+      <!--City-->
+      <label for="city">City</label>
+      <input type="text" name="city" value="" id="city" required />
+    </fieldset>
+      
+    <fieldset>
+    	<legend><span class="section">3</span>Educational Qualification[Current/Most Recent]</legend>
+    	<!--Name of Imstitution-->
+    	<label class="" for="instname">Name of Institution:</label>
+      	<input type="text" name="instname" value="" id="instname" required />
+      	<!--Field of study-->
+      	<label class="" for="fstudy">Field of Study:</label>
+      	<input type="text" name="fstudy" value="" id="fstudy" required />
+      	<!--Degree level-->
+      	<label for="dlevel">Degree Level:</label>
+      	<select name="dlevel" id="dlevel" required>
+        <optgroup label="Science">
+          <option value="be" id="be">BE/BTech</option>
+          <option value="medical" id="medical">Medical</option>
+          <option value="bsc" id="bsc">BSc</option>
+        </optgroup>
+        <optgroup label="Commerce">
+          <option value="bcom" id="bcom">BCom</option>
+          <option value="bba" id="bba">BBA</option>
+          <option value="bms" id="bms">BMS</option>
+        </optgroup>
+        <optgroup>
+        	<option value="other" id="oth">Others</option>
+        </optgroup>
+      </select>
+
+      <br /><br />
+      <!--if degree not listed-->
+      <label class="" for="other">If your degree isnt listed please enter here:</label>
+      	<input type="text" name="other" value="" id="other"/>
+      <!--month and year of graduation-->
+     <label class="" for="mygrad">Month and year of graduation:</label>
+       <input type="month" name="mygrad" value="" id="mygrad" required />
+      	
+    </fieldset>
+
+    <fieldset>
+    	<legend><span class="section">4</span>Work Experience</legend>
+    	<!--Total year of experiance-->
+    	<label for="totexp">Total year of experience</label>
+      	<input type="number" name="totexp" value="" id="totexp" min="0" max="100" required />
+      	<br>
+      	<!--Analytical Experience-->
+      	<label for="aexp">Years of Analytics Experiecne</label>
+      	<input type="number" name="aexp" value="" id="aexp" min="0" max="100" required />
+      	<!--
+      	<label for="na">Nature of Analytics</label>
+      	<input type="" name="na" value="" id="na" required />
+		-->
+    </fieldset>
+
+    <fieldset>
+		<legend><span class="section">5</span>Company</legend> 
+		<label class="" for="company">Company Name:</label>
+      	<input type="text" name="company" value="" id="company"/>  	
+
+      	<label class="" for="position">Position:</label>
+      	<input type="text" name="position" value="" id="position"/> 
+
+      	<label class="" for="from">From:</label>
+      	<input type="text" name="from" value="" id="from"/>  
+
+      	<label class="" for="to">To:</label>
+      	<input type="text" name="to" value="" id="to"/> 
+
+      	<input type="checkbox" name="work" value="" id="work"> I am currently working here<br>
+
+    </fieldset>
+
+
+      <button type="submit" sendMessage()>Submit</button>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="C:\Users\pconh\OneDrive\Desktop\datagami\app.js"></script>
+</body>
+
+</html>
